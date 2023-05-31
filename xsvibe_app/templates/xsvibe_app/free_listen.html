@@ -1,0 +1,153 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{musics.beatname}}</title>
+  
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body style="background-image: url({{musics.beatimg.url}}); background-size: cover;">
+<!-- <div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul> -->
+
+    <!-- this place is showing the nav icons  -->
+    <header class="d-flex flex-wrap justify-content-center py-0 mb-0 bg-primary">
+        <a href="{% url 'xsvibez' %}" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+          <img src="{% static 'image/MY.jpeg' %}" alt="" width="45" height="38">
+          <span class="fs-2 text-dark">XSVIBEZ.COM</span>
+        </a>
+      </header>
+
+    <header class="p-1 bg-dark text-white">
+        <div class="container">
+          <div class="flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <nav class="nav nav-masthead justify-content-center mb-md-2 col-12 c0l-lg-auto me-lg-auto mb-2">
+              <a class="nav-link active" aria-current="page" href="{% url 'xsvibez' %}">Home</a>
+              <a class="nav-link" href="{% url 'music' %}">Musics</a>
+              <a class="nav-link" href="{% url 'video' %}">Videos</a>
+              <a class="nav-link" href="{% url 'free_beat' %}">Freebeats</a>
+            </nav>
+            <form class="d-flex col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3"  method="GET" action="{% url 'free_beat' %}">
+              <input class="form-control me-2 outline-primary" type="search" name="q" placeholder="Search Beat..">
+              <button class="btn btn-outline-primary"  type="submit">Search Music..</button>
+           </form>
+          </div>
+        </div>
+      </header>
+
+      <!-- end of icon here -->
+
+<!-- <li><a href="https://www.jqueryscript.net/other/Minimal-Audio-Player-Spinning-Images.html">Download This Plugin</a></li>
+<li><a href="https://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul> -->
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<!-- <script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+
+
+</script></div> -->
+
+<!-- the music player function star here and it been centered  -->
+
+<center>
+    <div class="jquery-script-clear"></div>
+</div>
+</div>
+<!-- div for the player name, music and title -->
+<div class="player" style="margin-top: 100px;">
+    <div class="player__bar">
+        <div class="player__album">
+            <div class="player__albumImg active-song" data-author="{{musics.beatartistname}} " data-song="{{musics.beatname}}" data data-src="{{musics.beatfile.url}}"
+                style="background-image: url({{musics.beatimg.url}})">
+            </div>
+            <div class="player__albumImg" data-author="{{musics.beatartistname}} " data-song="{{musics.beatname}}" data data-src="{{musics.beatfile.url}}"
+                style="background-image: url({{musics.beatimg.url}})">
+            </div>
+        </div>
+        <!-- end of the player div -->
+        <!-- div for the player div controlls -->
+
+        <!-- div for the preview controlls -->
+
+        <div class="player__controls">
+            <div class="player__prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                    <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                    <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+                  </svg>
+            </div>
+        <!-- end for the preview controlls -->
+        
+
+        <!-- div for the play and pause controlls -->
+            <div class="player__play">
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" fill="currentColor" class="bi bi-music-note"  class="icon play" viewBox="0 0 16 16">
+                        <path d="M9 13c0 1.105-1.12 2-2.5 2S4 14.105 4 13s1.12-2 2.5-2 2.5.895 2.5 2z"/>
+                        <path fill-rule="evenodd" d="M9 3v10H8V3h1z"/>
+                        <path d="M8 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 13 2.22V4L8 5V2.82z"/>
+                      </svg>
+                
+                
+               
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" fill="currentColor"  class="icon pause" class="bi bi-pause" viewBox="0 0 16 16">
+                        <path d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+            </div>
+        <!-- end for the play and pause controlls -->
+
+
+        <!-- div for the next controlls -->
+            <div class="player__next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-forward" viewBox="0 0 16 16">
+                    <path d="M9.502 5.513a.144.144 0 0 0-.202.134V6.65a.5.5 0 0 1-.5.5H2.5v2.9h6.3a.5.5 0 0 1 .5.5v1.003c0 .108.11.176.202.134l3.984-2.933a.51.51 0 0 1 .042-.028.147.147 0 0 0 0-.252.51.51 0 0 1-.042-.028L9.502 5.513zM8.3 5.647a1.144 1.144 0 0 1 1.767-.96l3.994 2.94a1.147 1.147 0 0 1 0 1.946l-3.994 2.94a1.144 1.144 0 0 1-1.767-.96v-.503H2a.5.5 0 0 1-.5-.5v-3.9a.5.5 0 0 1 .5-.5h6.3v-.503z"/>
+                  </svg>
+            </div>
+        </div>
+    </div>
+    <!-- end of next controlls -->
+    <div class="player__timeline">
+        <p class="player__author"></p>
+        <p class="player__song"></p>
+        <div class="player__timelineBar">
+            <div id="playhead"></div>
+        </div>
+    </div>
+</div>
+</center>
+
+
+<!-- END CONTENT  -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</html>
